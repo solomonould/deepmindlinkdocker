@@ -4,7 +4,7 @@ import torch
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 n_features = 3
 
-data_folder = './data'
+data_folder = '/usr/app/src/data'
 
 #sweet
 
