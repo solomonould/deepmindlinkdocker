@@ -20,7 +20,7 @@ rd2 = 4.1
 
 def load_checkpoint(fpath, model, optimizer):
     print('load checkpoint...')
-    checkpoint = torch.load(fpath)
+    checkpoint = torch.load(fpath, map_location='cpu')
     model.load_state_dict(checkpoint['state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer'])
     return model, optimizer
